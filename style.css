@@ -1,0 +1,503 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+.logo-mario {
+    height: 200px;
+    
+}
+
+button {
+    color: white;
+    background-color: #C51111;
+    border-radius: 3px;
+    border: none;
+    width: 200px;
+    height: 50px;
+    cursor: pointer;
+    text-transform: uppercase;
+    font-weight: bold;
+    margin-top: 30px;
+}
+
+
+.img-mario-luigi {
+    height: 500px;
+    position: fixed;
+    right: 20px;
+    bottom: 20px;
+}
+
+body {
+    height: 100vh;
+}
+
+.caixa-mae {
+    display: flex;
+    height: 100vh;
+    align-items: center;
+    padding: 100px;
+    
+}
+
+.caixa-principal {
+width: 50%;
+
+}
+
+
+.caixa-video {
+    position: fixed;
+    z-index: -1;
+    top: 0;
+}
+
+video {
+    min-height: 100%;
+    min-width: 100%;
+    position: fixed;
+    top: 0;
+}
+
+.mascara {
+    height: 100%;
+    width: 100%;
+    background: linear-gradient(109deg, rgba(10, 12, 16, 0.99) 15%, rgba(10, 12, 16, 0.7) 50%, rgba(10, 12, 16, 0.99) 85%);
+    position: fixed;
+    top: 0;
+   
+}
+
+.link-whatsapp img {
+    height: 60px;
+    position: fixed;
+    right: 20px;
+    bottom: 20px;
+}
+
+
+ .header img {
+    height: 60px;
+ }
+
+ .header a{
+    color: white;
+    font-size: 24px;
+    cursor: pointer;
+ }
+
+
+ .header a:hover {
+color: #C51111;
+font-size: 26px;
+transition: 0.5s ease-in-out;
+
+ }
+
+ /* ========================================
+   FORMULÁRIO
+======================================== */
+
+.formulario-fale-conosco {
+
+    background-color: white;
+
+    display: flex;
+    flex-direction: column;
+
+    gap: 12px;
+
+    position: fixed;
+
+    padding: 25px;
+
+    border-radius: 8px;
+
+    width: 320px;
+
+    max-width: 90%;
+
+    top: 50%;
+    left: 50%;
+
+    transform: translate(-50%, -50%) scale(0.8);
+
+    opacity: 0;
+
+    visibility: hidden;
+
+    z-index: 20;
+
+    transition:
+        opacity 0.3s ease,
+        transform 0.3s ease,
+        visibility 0.3s ease;
+}
+
+
+/* FORMULÁRIO ABERTO */
+
+.formulario-fale-conosco.ativo {
+
+    opacity: 1;
+
+    visibility: visible;
+
+    transform:
+        translate(-50%, -50%)
+        scale(1);
+
+}
+
+
+/* TÍTULO */
+
+.formulario-fale-conosco h2 {
+
+    color: #222;
+
+    margin-bottom: 5px;
+
+}
+
+
+/* CAMPOS */
+
+.formulario-fale-conosco input,
+.formulario-fale-conosco textarea {
+
+    width: 100%;
+
+    border-radius: 5px;
+
+    border: 1px solid #aaa;
+
+    padding: 10px;
+
+    outline: none;
+
+    font-family: inherit;
+
+}
+
+
+.formulario-fale-conosco input {
+
+    height: 40px;
+
+}
+
+
+.formulario-fale-conosco textarea {
+
+    height: 100px;
+
+    resize: vertical;
+
+}
+
+
+/* BOTÃO FECHAR */
+
+.fechar-formulario {
+
+    position: absolute;
+
+    top: 5px;
+
+    right: 10px;
+
+    width: auto;
+
+    height: auto;
+
+    margin: 0;
+
+    padding: 0;
+
+    background: none;
+
+    color: #333;
+
+    font-size: 28px;
+
+    font-weight: normal;
+
+}
+
+
+/* MÁSCARA */
+
+.mascara-formulario {
+
+    visibility: hidden;
+
+    opacity: 0;
+
+    position: fixed;
+
+    z-index: 15;
+
+    top: 0;
+
+    left: 0;
+
+    width: 100vw;
+
+    height: 100vh;
+
+    background-color: rgba(0, 0, 0, 0.75);
+
+    transition: opacity 0.3s ease;
+
+}
+
+
+.mascara-formulario.ativo {
+
+    visibility: visible;
+
+    opacity: 1;
+
+}
+
+
+.header {
+
+    position: fixed;
+
+    top: 0;
+    left: 0;
+
+    width: 100%;
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 30px;
+
+    padding: 20px 40px;
+
+    z-index: 10;
+
+}
+
+
+.header img {
+
+    height: 60px;
+
+}
+
+
+.header nav {
+
+    display: flex;
+
+    gap: 30px;
+
+}
+
+
+.header a {
+
+    color: white;
+
+    font-size: 20px;
+
+    text-decoration: none;
+
+    cursor: pointer;
+
+    transition: color 0.3s ease;
+
+}
+
+
+.header a:hover {
+
+    color: #C51111;
+
+}
+
+
+/* ========================================
+   SERVIÇOS
+======================================== */
+
+.servicos {
+
+    min-height: 100vh;
+
+    padding: 120px 8% 80px;
+
+    color: white;
+
+    position: relative;
+
+    z-index: 2;
+
+}
+
+
+.servicos h2 {
+
+    font-size: 36px;
+
+    margin-bottom: 40px;
+
+}
+
+
+.servicos-container {
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(3, 1fr);
+
+    gap: 25px;
+
+}
+
+
+.servicos-container article {
+
+    background-color:
+        rgba(0, 0, 0, 0.65);
+
+    padding: 30px;
+
+    border-radius: 10px;
+
+    border: 1px solid
+        rgba(255, 255, 255, 0.15);
+
+    transition:
+        transform 0.3s ease;
+
+}
+
+
+.servicos-container article:hover {
+
+    transform:
+        translateY(-8px);
+
+}
+
+
+.servicos-container h3 {
+
+    color: #C51111;
+
+    margin-bottom: 15px;
+
+}
+
+
+.servicos-container p {
+
+    line-height: 1.6;
+
+}
+
+/* ========================================
+   RESPONSIVIDADE
+======================================== */
+
+@media (max-width: 768px) {
+
+    .header {
+
+        padding: 15px 20px;
+
+        gap: 15px;
+
+    }
+
+
+    .header img {
+
+        height: 45px;
+
+    }
+
+
+    .header nav {
+
+        gap: 15px;
+
+    }
+
+
+    .header a {
+
+        font-size: 14px;
+
+    }
+
+
+    .caixa-mae {
+
+        padding: 30px;
+
+    }
+
+
+    .caixa-principal {
+
+        width: 100%;
+
+    }
+
+
+    .logo-mario {
+
+        height: 130px;
+
+    }
+
+
+    .img-mario-luigi {
+
+        height: 300px;
+
+        right: -20px;
+
+        bottom: 10px;
+
+        opacity: 0.8;
+
+    }
+
+
+    .servicos {
+
+        padding: 100px 30px 50px;
+
+    }
+
+
+    .servicos-container {
+
+        grid-template-columns: 1fr;
+
+    }
+
+
+    .link-whatsapp img {
+
+        height: 50px;
+
+        right: 15px;
+
+        bottom: 15px;
+
+    }
+
+}
